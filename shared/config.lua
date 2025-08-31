@@ -1,27 +1,33 @@
 Config = {}
-Config['Version'] = 3.2 -- DON'T TOUCH THIS
-Config['Locale'] = 'en' -- es // en
 
+-- Basic Info
+Config['Version'] = 3.2 -- DO NOT TOUCH
+Config['Locale'] = 'en' -- 'es' or 'en'
+
+-- Webhook Settings
 Config['EnableWebhook'] = false
-Config['Webhook'] = "" -- Change me compulsory
-Config['CommunityName'] = "Nekix Vehicle Shop Logs" -- Change me if you want
-Config['CommunityLogo'] = 'https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256' -- Change me if you want
-Config['Avatar'] = 'https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256' -- Change me if you want
+Config['Webhook'] = "" -- Your webhook URL
+Config['CommunityName'] = "Nekix Vehicle Shop Logs"
+Config['CommunityLogo'] = "https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256"
+Config['Avatar'] = "https://cdn.discordapp.com/icons/838115320597446677/a96dc72395659c8d3921bece0ac2039d?size=256"
 
+-- Vehicle Shop Settings
 Config['VS'] = {
-    ['PressKey'] = 38, -- E
-    ['NeedLicense'] = false, -- Need license? Dependency --> esx_license
-    ['LicenseRequired'] = 'drive', -- Only if ['NeedLicense'] is true
-    ['PersonalizedPlate'] = true,
-    ['RandomPlate'] = false, -- Random letters and numbers
-    ['TestTime'] = 1, -- IN MINUTES! Minutes, not ms
-    ['BackToVSAfterTest'] = true, -- Back to the Vehicle Shop after the drive test finished
+    ['PressKey'] = 38, -- E key
+    ['NeedLicense'] = false, -- Enable license check
+    ['LicenseRequired'] = 'drive', -- License type required if NeedLicense=true
+    ['PersonalizedPlate'] = true, -- Allow custom plates
+    ['RandomPlate'] = false, -- Use random letters/numbers if true
+    ['TestTime'] = 1, -- Test drive duration in minutes
+    ['BackToVSAfterTest'] = true, -- Teleport back after test
+
     ['Menu'] = {
-        {label = "Test de conduccion del coche", value = 'test'}, -- Only if ['DriveTest'] is true ^^
-        {label = "Inserta Matricula Personalizada", value = 'plate'}, -- Only if ['PersonalizedPlate'] is true ^^
+        {label = "Test de conducción del coche", value = 'test'},
+        {label = "Inserta Matrícula Personalizada", value = 'plate'},
         {label = "Pagar con Dinero en Mano", value = 'money'},
-        {label = "Pgar con Dinero del Banco", value = 'bank'}
+        {label = "Pagar con Dinero del Banco", value = 'bank'}
     },
+
     ['Blips'] = {
         {
             ['x'] = 222.1689,
@@ -42,11 +48,12 @@ Config['VS'] = {
             ['label'] = "Vehicle Shop 2",
         }
     },
+
     ['Cars'] = {
         {
             ['model'] = 'blista',
             ['label'] = "Blista",
-            ['price'] = 4,
+            ['price'] = 4000,
             ['x'] = 227.5898,
             ['y'] = -873.8725,
             ['z'] = 30.4921,
@@ -56,7 +63,7 @@ Config['VS'] = {
         {
             ['model'] = 'bati',
             ['label'] = "Bati",
-            ['price'] = 1,
+            ['price'] = 1000,
             ['x'] = -53.45557,
             ['y'] = -1116.232,
             ['z'] = 26.435,
@@ -64,6 +71,7 @@ Config['VS'] = {
             ['spawner'] = 'Test2'
         },
     },
+
     ['Spawners'] = {
         ['Test1'] = {
             ['x'] = 222.1689,
@@ -78,8 +86,9 @@ Config['VS'] = {
             ['r'] = 334.4646
         },
     },
+
     ['Sellers'] = {
-        ['Percentage'] = 50, -- 50%, you can change it.
+        ['Percentage'] = 50, -- 50% back to seller
         ['Locations'] = {
             {
                 ['x'] = -45.24,
